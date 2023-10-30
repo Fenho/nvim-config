@@ -52,7 +52,10 @@ return {
     -- configure lualine with modified theme
     lualine.setup({
       options = {
+        icons_enabled = true,
         theme = my_lualine_theme,
+        component_separator = '|',
+        section_separators = '',
       },
       sections = {
         lualine_x = {
@@ -65,6 +68,11 @@ return {
           { "fileformat" },
           { "filetype" },
         },
+        --[[ lualine_a = {
+          {
+            'buffers',
+          }
+        } ]]
       },
     })
   end,
